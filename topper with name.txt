@@ -1,0 +1,33 @@
+def marks(**m):
+    lst=[]
+    lst1=[]
+    for i,j in m.items():
+        s=0
+        lst1.append(i)
+        for x in j:
+            s=s+x
+        per=s/5
+        print(i,"=", "total is: ",s , "percentage is: ",per)
+        lst.append(per)
+
+    d=dict(zip(lst1,lst))
+    mvf=max_number(lst)
+    print("max value from func: ",mvf)
+    for p,q in d.items():
+        if(q==mvf):
+            print(p,q)
+            print("congratulation ",p)
+
+
+def max_number(no):
+    m_no=no[0]
+    for i in range(1, len[no]):
+        if(no[i]>m_no):
+            m_no=no[i]
+
+    print("max no is:",m_no)
+    return m_no
+
+
+marks(anuja=[96,56,68,39,76] ,payal=[89,78,56,64,52] ,poonam=[96,68,97,76,88] ,shweta=[67,86,48,69,99])
+
